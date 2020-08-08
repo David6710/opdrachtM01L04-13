@@ -1,0 +1,62 @@
+body {
+    font-size: 20px;
+}
+
+.container {
+    height: 100%;
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 400px 150px 50px;
+    grid-template-areas:
+    "h h h h h h h h h h h h"
+    "m m m m m m m m m m m m"
+    "w w w w w w w w w w w w"
+    "f f f f f f f f f f f f";
+
+}
+
+header {color: white; background-color: turquoise;
+    grid-area: h;
+    padding: 10px; 
+}
+
+main {color: white; background-color: yellowgreen;
+    grid-area: m;
+    padding: 10px; 
+}
+
+.widget{color: white; background-color: violet;
+    grid-area: w;
+    padding: 10px; 
+}
+footer {color: white; background-color: darkblue;
+    grid-area: f;
+    padding: 10px; 
+   
+}
+
+@media screen and (min-width: 1024px ) {
+    .container {
+        height: 100%;
+        display: grid; 
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 50px 400px 150px 50px;
+        grid-template-areas:
+        "h h h h m m m m m m m m"
+        "h h h h m m m m m m m m"
+        "h h h h w w w w w w w w"
+        "h h h h f f f f f f f f";
+    }}
+
+@media screen and (min-width: 1680px ) {
+    .container {
+        height: 100%;
+        display: grid; 
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 50px 400px 150px 50px;
+        grid-template-areas:
+        "h h h m m m m m m w w w"
+        "h h h m m m m m m w w w "
+        "h h h m m m m m m w w w"
+        "h h h f f f f f f w w w";
+    }}  
